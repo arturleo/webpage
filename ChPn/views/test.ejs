@@ -1,0 +1,43 @@
+    <div class="mdc-card card-result-first hidethis">
+		<div id="textd">
+			<h4 class="mdc-typography--headline4" id="resultmessage">Congratulations! Your score is</h4>
+			<h5 class="mdc-typography--headline5">Statistics:</h5>
+		</div>
+        <%- include(`./plugin/chart.ejs`) %>
+    </div>
+	<div id="problem-area" class="placecenter">
+		<% for (var i = 0; i < 10; i++) {%>
+			<div class="section-sglque mdc-card ">
+				<div class="problem-content">
+					<h5 class="mdc-typography--headline5">What's the <%- cont[i].type=="2"?'character':'pinyin' %> of <%=cont[i].question %>?</h5>
+				</div>
+				<div class="ratio-row ratio-row-choc">
+				<% for (var j = 0; j < 4; j++) {%>
+
+					<div class="mdc-form-field singleq" id="q-<%= i%>-<%= j%>">
+						<div class="mdc-radio selec">
+							<input class="mdc-radio__native-control choose" type="radio" id="radio-<%= i%>-<%= j%>" name="radio-<%= i%>" >
+							<div class="mdc-radio__background">
+								<div class="mdc-radio__outer-circle"></div>
+								<div class="mdc-radio__inner-circle"></div>
+							</div>
+						</div>
+						<label for="radio-<%= i%>-<%= j%>"> <%=cont[i].ratio[j]%> </label>
+					</div>
+
+				<% } %>
+				</div>
+			</div>
+		<% } %>
+		<div id="getresult" class="placecenter">
+			<button class="mdc-button mdc-button--outlined ">
+				<span class="mdc-button__label">Submit</span>
+			</button>
+		</div>
+	</div>
+    
+
+
+
+
+

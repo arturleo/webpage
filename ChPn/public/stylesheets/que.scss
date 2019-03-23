@@ -1,0 +1,55 @@
+.section-sglque {
+  background-color: $background-color;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 880px;
+  min-width: 270px;
+  margin: 70px auto;
+
+  .problem-content {
+    padding: 4px 15px 0;
+
+    h2 {
+      margin-block-end: 0;
+    }
+  }
+
+  .ratio-row-choc {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+
+    .singleq {
+      background-color: transparent;
+      /*  width:64%;
+        max-width: 1152px;
+        min-width: 416px;*/
+      margin: 10px 20px;
+      padding: 8px;
+
+      label {
+        order: 0;
+        margin-right: auto;
+        padding-left: 4px;
+      }
+
+      .selec {
+        position: relative;
+      }
+    }
+  }
+}
+
+.anstrue{
+	@include mdc-radio-checked-stroke-color(LimeGreen);
+	@include mdc-radio-ink-color(LimeGreen);
+}
+
+.ansfalse{
+	@include mdc-radio-checked-stroke-color(OrangeRed);
+	@include mdc-radio-ink-color(OrangeRed);
+}
+
+

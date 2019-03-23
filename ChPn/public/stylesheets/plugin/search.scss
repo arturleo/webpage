@@ -1,0 +1,107 @@
+.search-form, .search-form__form, .search-form__input {
+  width: 100%;
+  height: 64px;
+}
+.search-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity .1s cubic-bezier(.4,0,.2,1);
+  z-index: -1;
+}
+.search-form--open {
+  opacity: 1;
+  z-index: 6;
+}
+
+.search-form__input {
+  font-family: Roboto,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 2.125rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-decoration: inherit;
+  text-transform: inherit;
+  padding: 0 40px;
+  padding-right: 72px;
+  font-size: 1.714rem;
+  box-sizing: border-box;
+}
+
+.search-form__label--animate-in {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.search-form__label {
+  font-family: Roboto,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-decoration: inherit;
+  text-transform: inherit;
+  position: absolute;
+  top: 30px!important;
+  left: 42px;
+  margin-top: -13px;
+  transform: translateY(15px);
+  transition: transform .15s cubic-bezier(.4,0,.2,1),opacity .1s cubic-bezier(.4,0,.2,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  font-size: 1.714rem;
+  color: #757575;
+}
+
+.search-form__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.search-form__close-icon.mdc-ripple-upgraded {
+  --mdc-ripple-fg-opacity: 0.16;
+}
+.search-form__close-icon {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  will-change: transform,opacity;
+  padding: 10px;
+  background-image: url(https://material.io/tools/icons/static/icons/baseline-close-24px.svg);
+  transform: rotate(-90deg);
+  transition: transform .2s cubic-bezier(.4,0,.2,1);
+}
+.search-form__close-icon, .search-form__search-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  transform: scale(1.3);
+}
+.search-form__close-icon--rotate {
+  transform: rotate(90deg);
+}
+.search-form__label--animate-in {
+  transform: translateY(0);
+  opacity: 1;
+}
+

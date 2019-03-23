@@ -1,0 +1,45 @@
+<div class="chartplace">
+	<div id="menu-lists">
+		<div id="typeselec"class="mdc-select demo-width-class">
+			<input type="hidden" name="enhanced-select">
+			<i class="mdc-select__dropdown-icon"></i>
+			<div id="demo-selected-text" class="mdc-select__selected-text" role="button" aria-haspopup="listbox" aria-labelledby="demo-label demo-selected-text">Vegetables</div>
+			<div class="mdc-select__menu mdc-menu mdc-menu-surface" id="type-menu" role="listbox">
+				<ul class="mdc-list">
+					<li class="mdc-list-item" data-value="Bar" role="option">Bar</li>
+					<li class="mdc-list-item mdc-list-item--selected" data-value="Line" role="option">Line</li>
+	<!--                <li class="mdc-list-item mdc-list-item&#45;&#45;disabled" data-value="vegetables" aria-selected="true" aria-disabled="true" role="option">
+						Vegetables
+					</li>-->
+					<li class="mdc-list-item" data-value="Pie" role="option">
+						Pie
+					</li>
+				</ul>
+			</div>
+			<span id="demo-label" class="mdc-floating-label mdc-floating-label--float-above">Type</span>
+			<div class="mdc-line-ripple"></div>
+		</div>
+		<div id="spanselec" class="mdc-select demo-width-class">
+			<input type="hidden" name="enhanced-select">
+			<i class="mdc-select__dropdown-icon"></i>
+			<div id="demo-selected-text" class="mdc-select__selected-text" role="button" aria-haspopup="listbox" aria-labelledby="demo-label demo-selected-text">Span</div>
+			<div class="mdc-select__menu mdc-menu mdc-menu-surface" id="span-menu" role="listbox">
+				<ul class="mdc-list">
+					<li class="mdc-list-item " data-value="" role="option">All</li>
+					<li class="mdc-list-item" data-value="Year" role="option">Year</li>
+	<!--                <li class="mdc-list-item mdc-list-item&#45;&#45;disabled" data-value="vegetables" aria-selected="true" aria-disabled="true" role="option">
+						Vegetables
+					</li>-->
+					<li class="mdc-list-item mdc-list-item--selected" data-value="Month" role="option">
+						Month
+					</li>
+				</ul>
+			</div>
+			<span id="demo-label" class="mdc-floating-label mdc-floating-label--float-above">Span</span>
+			<div class="mdc-line-ripple"></div>
+		</div>
+	</div>
+	<div class="chartdiv">
+		<canvas id="resultChart" width="400" height="400"></canvas>
+	</div>
+</div>

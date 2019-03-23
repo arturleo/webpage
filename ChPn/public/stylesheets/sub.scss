@@ -1,0 +1,56 @@
+#getresult{
+  display: inline-block;
+  margin: 0 auto 40px;
+  
+}
+.card-result-first{
+	align-items:center;
+	#textd{
+		align-items: flex-start;
+	}
+	#resultmessage{
+		 margin: 30px 5px 5px;
+	}
+	h5{
+		 margin: 20px 5px;
+	}
+	.chartdiv{
+		min-width: 350px;
+		max-width: 550px;
+		width: 65vh;
+	}
+}
+#pronc-page{
+    text-align: center;
+	margin: 5% auto;
+}
+.learn-body--hidden{
+	display:none;
+}
+.learn-body{
+	.mdc-icon-button::before {
+		top: calc(50% - 27.5%);
+		left: calc(50% - 27.5%);
+		width: calc(55%);
+		height: calc(55%);
+	}
+}
+
+.my-card__media {
+  background-image: url("/images/how-to-read-chinese.jpg");
+}
+
+.mdc-card-index{
+  padding: 0!important;
+  width: 50%!important;
+  min-width:500px!important;
+  max-width:1000px!important;
+}
+
+.index-pri{
+  padding: 0 25px 30px;
+}
+
+#privacyPage{
+  text-align: center;
+}

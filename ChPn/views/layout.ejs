@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title><%= title%></title>
+        <link rel='stylesheet' href='../bundle.css'/>
+        <% /* %>
+        <% if( templateName=="ques") {%>
+        <% } %>
+        <% */ %>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    </head>
+    <body class="mdc-typography">
+
+    <!--    <div class="main-header">-->
+        <aside class="mdc-drawer mdc-drawer--modal">
+            <div class="mdc-drawer__header">
+                <h3 class="mdc-drawer__title">Username</h3>
+                <h6 class="mdc-drawer__subtitle">Welcome to learn Chinese.</h6>
+            </div>
+            <!--<hr class="mdc-list-divider">-->
+            <div class="mdc-drawer__content">
+                <nav class="mdc-list">
+                    <a class="mdc-list-item home mdc-list-item--activated" href="/" aria-selected="true">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+                        <span class="mdc-list-item__text">Home</span>
+                    </a>
+                    <a class="mdc-list-item learn" href="/learn">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
+                        <span class="mdc-list-item__text">Learn</span>
+                    </a>
+                    <a class="mdc-list-item test" href="/test">
+                        <i class="material-icons  mdc-list-item__graphic" aria-hidden="true">equalizer</i>
+                        <span class="mdc-list-item__text">Test</span>
+                    </a>
+                    <hr class="mdc-list-divider">
+                    <h6 class="mdc-list-group__subheader">Tool</h6>
+                    <a class="mdc-list-item searchpronc" href="/tool/searchpronc">
+                        <i class="material-icons  mdc-list-item__graphic" aria-hidden="true">spellcheck</i>
+                        <span class="mdc-list-item__text">Search Pronunciation</span>
+                    </a>
+                    <hr class="mdc-list-divider">
+                    <h6 class="mdc-list-group__subheader">Account</h6>
+                    <a class="mdc-list-item history" href="/user/history">
+                        <i class="material-icons  mdc-list-item__graphic" aria-hidden="true">table_chart</i>
+                        <span class="mdc-list-item__text">History</span>
+                    </a>
+                    <a class="mdc-list-item setting" href="/user/setting">
+                        <i class="material-icons  mdc-list-item__graphic" aria-hidden="true">settings</i>
+                        <span class="mdc-list-item__text">Setting</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+        <div class="mdc-drawer-scrim"></div>
+
+        <div id="drawer-frame-app-content">
+            <header class="mdc-top-app-bar app-bar" id="app-bar">
+                <div class="search-form" id="top-level-search-bar">
+                    <form class="search-form__form" id="top-level-search-form">
+                        <input type="text" class="search-form__input" id="top-level-search-input" autocomplete="off">
+                    </form>
+                    <div class="search-form__label" id="top-level-search-label">Search</div>
+                    <button class="search-form__button search-form__button--close" id="top-level-search-close" aria-label="Close search">
+                        <div class="search-form__close-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" id="close-button-icon" data-mdc-ripple-is-unbounded="" style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;"></div>
+                    </button>
+                </div>
+                <div class="mdc-top-app-bar__row">
+                    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                        <a  class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
+                        <span class="mdc-top-app-bar__title">Chinese Pronunciation Guide</span>
+                    </section>
+                    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                        <a class="material-icons mdc-top-app-bar__action-item" id="account-icon"aria-label="Account">account_circle</a>
+                        <a class="material-icons mdc-top-app-bar__action-item" id="search-icon" aria-label="Search">search</a>
+                    </section>
+                </div>
+                <% /* %>
+                <% */ %>
+                <% if( headerName!=null ) { %>
+                    <%- include(`./header/${headerName}.ejs`) %>
+                <% } %>
+
+            </header>
+
+            <%- include(`./plugin/login.ejs`) %>
+
+
+            <div id="drawer-main-content">
+                <div class="mdc-top-app-bar--fixed-adjust"></div>
+                <div id="main-content">
+                    <%- include(`./${templateName}.ejs`) %>
+                </div>
+            </div>
+			<%- include(`./footer.ejs`) %>
+        </div>
+        <script src="../bundle.js"></script>
+    </body>
+</html>

@@ -1,0 +1,138 @@
+//import first
+@import "theme";
+
+@import "@material/button/mdc-button";
+@import "@material/icon-button/mdc-icon-button";
+
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/form-field/mdc-form-field";
+@import "@material/radio/mdc-radio";
+
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
+
+@import "@material/theme/color-palette";
+@import "@material/typography/mdc-typography";
+
+@import "@material/card/mdc-card";
+
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
+
+@import "@material/dialog/mdc-dialog";
+@import "@material/textfield/mdc-text-field";
+
+@import "@material/list/mdc-list";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/menu/mdc-menu";
+@import "@material/select/mdc-select";
+
+
+$background-color: #f2f2f2;
+$section-color: #dcdcdc;
+$tab-label-color:#fff5ff;
+
+//import other files
+@import "que";
+@import "learn";
+@import "sub";
+@import "plugin/login";
+@import "plugin/plugin";
+@import "plugin/search";
+// Use full-opacity equivalent of rgba(0, 0, 0, .05) and expose for demos to reference
+
+
+.mdc-top-app-bar, .mdc-drawer, .mdc-tab-bar{
+  top: 0;
+  left: 0;
+}
+.drawer-main-content {
+  overflow: auto;
+  height: 100%;
+}
+
+.mdc-top-app-bar--fixed-adjust {
+  padding-top: 64px;
+}
+.tab-bar--fixed-adjust {
+  padding-top: 48px;
+}
+
+.tobe-inline{
+  display: inline-block;
+}
+.mdc-card{
+  width: 85%;
+  margin: 0 auto 50px;
+  padding: 0 25px 30px;
+}
+
+.mdc-tab-bar {
+  @include mdc-tab-text-label-color($tab-label-color);
+  @include mdc-tab-icon-color($tab-label-color);
+  .mdc-tab__ripple {
+    @include mdc-states($tab-label-color);
+  }
+  .mdc-tab-indicator{
+    @include mdc-tab-indicator-underline-color($tab-label-color);
+  }
+}
+
+/*body {
+  display: flex;
+  height: 100%;
+}
+
+.main-content {
+  overflow: auto;
+  height: 100%;
+}*/
+
+/**************
+*   footer    *
+**************/
+.footer__navigation-list {
+  //display:flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  text-align: start;
+  padding: 0 0;
+  list-style: none;
+  white-space:nowrap;
+  li{
+    display: inline;
+  }
+}
+footer{
+  background: $background-color;
+  align-items: flex-start!important;
+  text-align: start!important;
+  padding: 20px 7.5%;
+  margin: auto 0;
+  a, a:active, a:focus, a:hover,p{
+    color: #202124;
+    text-decoration: none;
+  }
+}
+
+#drawer-main-content{
+  min-height:98%
+}
+
+h5, h4, p, h6{
+  word-break: break-word;
+}
+#main-content{
+  min-height: 80vh;
+  /*text-align: center;*/
+}
+
+.placecenter{
+	text-align: center;
+}
+	
+.hidethis{
+	display: none;
+}
